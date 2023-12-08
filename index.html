@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+  <!-- Style -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Script -->
+  <script src="js/script.js"></script>
+  <!-- FontAwesome -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"
+  >
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <section id="converter-container">
+      <h1><i class="fa-solid fa-temperature-half"></i> Temperature Converter</h1>
+      <div id="fields-container">
+        <input type="number" id="temperature-input" placeholder="Enter temperature...">
+        <select name="temperature-selector" id="temperature-selector">
+          <option value="celsius">°C</option>
+          <option value="fahrenheit">°F</option>
+          <option value="kelvin">Kelvin</option>
+        </select>
+      </div>
+      <button type="submit">Convert</button>
+    </section>
+    <section id="results-container">
+      <h3><i class="fa-solid fa-square-poll-horizontal"></i> Results</h3>
+      <div class="dotted-line"></div>
+      <div id="results-text">
+        <p><i class="fa-solid fa-angles-right"></i> Celsius: <span id="celsius-result">1</span>°C</p>
+        <p><i class="fa-solid fa-angles-right"></i> Fahrenheit: <span id="fahrenheit-result">1</span>°F</p>
+        <p><i class="fa-solid fa-angles-right"></i> Kelvin: <span id="kelvin-result">1</span>K</p>
+      </div>
+    </section>
+    <div id="reset-text">
+      <p>Reset</p>
+    </div>
+  </main>
+  <footer>
+    <div id="footer-container">
+      <div class="line"></div>
+      <p>
+        <i class="fa-solid fa-screwdriver-wrench"></i> Created by Ednan – <a href="https://github.com/ednanf">GitHub</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
