@@ -122,6 +122,7 @@ button:disabled {
   color: #1d3557;
   text-decoration: underline;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 #reset-text:hover {
@@ -137,4 +138,9 @@ button:disabled {
 
 #footer-container a {
   color: #1d3557;
+  transition: 0.3s;
+}
+
+#footer-container a:hover {
+  color: #e63946;
 }
