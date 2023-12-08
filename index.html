@@ -7,7 +7,7 @@
   <!-- Style -->
   <link rel="stylesheet" href="css/style.css">
   <!-- Script -->
-  <script src="js/script.js"></script>
+  <script src="js/script.js" defer></script>
   <!-- FontAwesome -->
   <link 
     rel="stylesheet" 
@@ -33,15 +33,15 @@
           <option value="kelvin">Kelvin</option>
         </select>
       </div>
-      <button type="submit">Convert</button>
+      <button type="button">Convert</button>
     </section>
     <section id="results-container">
       <h3><i class="fa-solid fa-square-poll-horizontal"></i> Results</h3>
       <div class="dotted-line"></div>
       <div id="results-text">
-        <p><i class="fa-solid fa-angles-right"></i> Celsius: <span id="celsius-result">1</span>°C</p>
-        <p><i class="fa-solid fa-angles-right"></i> Fahrenheit: <span id="fahrenheit-result">1</span>°F</p>
-        <p><i class="fa-solid fa-angles-right"></i> Kelvin: <span id="kelvin-result">1</span>K</p>
+        <p><i class="fa-solid fa-angles-right"></i> Celsius: <span id="celsius-result"></span>°C</p>
+        <p><i class="fa-solid fa-angles-right"></i> Fahrenheit: <span id="fahrenheit-result"></span>°F</p>
+        <p><i class="fa-solid fa-angles-right"></i> Kelvin: <span id="kelvin-result"></span>K</p>
       </div>
     </section>
     <div id="reset-text">
