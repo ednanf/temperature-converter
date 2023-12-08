@@ -4,11 +4,15 @@ const selectedUnit = document.querySelector('#fields-container select')
 const convertButton = document.querySelector('#converter-container button')
 
 // RESULTS PROPERTIES
+const resultsContainer = document.querySelector('#results-container')
 const celsiusResult = (document.querySelector('#celsius-result'))
 const fahrenheitResult = (document.querySelector('#fahrenheit-result'))
 const kelvinResult = (document.querySelector('#kelvin-result'))
+const resetButton = document.querySelector('#reset-text p')
 
-const pCelsius = document.querySelector('#p-celsius')
+// const pCelsius = document.querySelector('#p-celsius')
+// const pFahrenheit = document.querySelector('#p-fahrenheit')
+// const pKelvin = document.querySelector('#p-kelvin')
 
 // EVENTS
 convertButton.addEventListener('click', (e) => {
@@ -17,8 +21,14 @@ convertButton.addEventListener('click', (e) => {
 
   e.preventDefault()
 
+  if (!numberValue) { return }
+
+  resultsContainer.style.display = 'block'
+
   convertTemperature(numberValue, baseUnit)
 })
+
+resetButton.addEventListener('click', reset)
 
 // FUNCTIONS
 function convertTemperature (value, unit) {
@@ -36,7 +46,7 @@ function convertTemperature (value, unit) {
       fahrenheitResult.innerHTML = tempFahrenheit
       kelvinResult.innerHTML = tempKelvin
 
-      pCelsius.setAttribute('class', 'hidden')
+      convertButton.disabled = true
 
       break
 
@@ -62,4 +72,11 @@ function convertTemperature (value, unit) {
 
       break
   }
+}
+
+function reset () {
+  resultsContainer.style.display = 'none'
+  convertButton.disabled = false
+  numberInput.value = ''
+  selectedUnit.value = 'celsius'
 }
