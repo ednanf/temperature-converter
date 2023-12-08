@@ -8,6 +8,8 @@ const celsiusResult = (document.querySelector('#celsius-result'))
 const fahrenheitResult = (document.querySelector('#fahrenheit-result'))
 const kelvinResult = (document.querySelector('#kelvin-result'))
 
+const pCelsius = document.querySelector('#p-celsius')
+
 // EVENTS
 convertButton.addEventListener('click', (e) => {
   const numberValue = parseFloat(numberInput.value) // float
@@ -33,6 +35,8 @@ function convertTemperature (value, unit) {
       celsiusResult.innerHTML = tempCelsius
       fahrenheitResult.innerHTML = tempFahrenheit
       kelvinResult.innerHTML = tempKelvin
+
+      pCelsius.setAttribute('class', 'hidden')
 
       break
 

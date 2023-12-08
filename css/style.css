@@ -26,6 +26,10 @@ body {
   background: linear-gradient(180deg, #e63946 0%, #a8dadc 70%);
 }
 
+main {
+  display: block;
+}
+
 /* DECORATION */
 .line {
   border-top: 1px dashed #f1faee;
@@ -103,10 +107,17 @@ button:hover {
 
 /* RESET */
 #reset-text {
+  border: 1px solid red;
   font-size: small;
   color: #1d3557;
   text-decoration: underline;
-  padding-bottom: 0;
+  cursor: pointer;
+  margin: 2rem auto;
+  max-width: 50px;
+}
+
+#reset-text:hover {
+  color: #e63946;
 }
 
 /* FOOTER */
