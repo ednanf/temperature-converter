@@ -26,9 +26,9 @@ function convertTemperature (value, unit) {
 
   switch (unit) {
     case 'celsius':
-      tempCelsius = value
-      tempFahrenheit = (value * 9 / 5) + 32
-      tempKelvin = value + 273.15
+      tempCelsius = (value).toFixed(2)
+      tempFahrenheit = ((value * 9 / 5) + 32).toFixed(2)
+      tempKelvin = (value + 273.15).toFixed(2)
 
       celsiusResult.innerHTML = tempCelsius
       fahrenheitResult.innerHTML = tempFahrenheit
@@ -37,9 +37,9 @@ function convertTemperature (value, unit) {
       break
 
     case 'fahrenheit':
-      tempCelsius = (value - 32) * 5 / 9
-      tempFahrenheit = value
-      tempKelvin = (value - 32) * 5 / 9 + 273.15
+      tempCelsius = ((value - 32) * 5 / 9).toFixed(2)
+      tempFahrenheit = (value).toFixed(2)
+      tempKelvin = ((value - 32) * 5 / 9 + 273.15).toFixed(2)
 
       celsiusResult.innerHTML = tempCelsius
       fahrenheitResult.innerHTML = tempFahrenheit
@@ -48,9 +48,9 @@ function convertTemperature (value, unit) {
       break
 
     case 'kelvin':
-      tempCelsius = value - 273.15
-      tempFahrenheit = (value - 275.17) * 9 / 5 + 32
-      tempKelvin = value
+      tempCelsius = (value - 273.15).toFixed(2)
+      tempFahrenheit = ((value - 275.17) * 9 / 5 + 32).toFixed(2)
+      tempKelvin = (value).toFixed(2)
 
       celsiusResult.innerHTML = tempCelsius
       fahrenheitResult.innerHTML = tempFahrenheit
