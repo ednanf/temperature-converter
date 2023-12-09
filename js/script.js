@@ -46,11 +46,7 @@ function convertTemperature (value, unit) {
       fahrenheitResult.innerHTML = tempFahrenheit
       kelvinResult.innerHTML = tempKelvin
 
-      // pCelsius.style.display = 'none'
-
-      convertButton.disabled = true
-      selectedUnit.disabled = true
-      numberInput.disabled = true
+      disableInterface()
 
       break
 
@@ -63,11 +59,7 @@ function convertTemperature (value, unit) {
       fahrenheitResult.innerHTML = tempFahrenheit
       kelvinResult.innerHTML = tempKelvin
 
-      // pFahrenheit.style.display = 'none'
-
-      convertButton.disabled = true
-      selectedUnit.disabled = true
-      numberInput.disabled = true
+      disableInterface()
 
       break
 
@@ -80,11 +72,7 @@ function convertTemperature (value, unit) {
       fahrenheitResult.innerHTML = tempFahrenheit
       kelvinResult.innerHTML = tempKelvin
 
-      // pKelvin.style.display = 'none'
-
-      convertButton.disabled = true
-      selectedUnit.disabled = true
-      numberInput.disabled = true
+      disableInterface()
 
       break
   }
@@ -97,4 +85,10 @@ function reset () {
   numberInput.disabled = false
   numberInput.value = ''
   selectedUnit.value = 'celsius'
+}
+
+function disableInterface () {
+  convertButton.disabled = true
+  selectedUnit.disabled = true
+  numberInput.disabled = true
 }
