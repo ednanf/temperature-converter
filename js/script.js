@@ -26,12 +26,22 @@ convertButton.addEventListener('click', (e) => {
   resultsContainer.style.display = 'block'
 
   convertTemperature(numberValue, baseUnit)
+
+  // Show all result divs
+  const allDivs = document.querySelectorAll('#results-text > p')
+  allDivs.forEach((div) => {
+    div.style.display = 'block'
+  })
+
+  // Hide selected unit div
+  const selectedDiv = document.querySelector(`#p-${baseUnit}`)
+  selectedDiv.style.display = 'none'
 })
 
 resetButton.addEventListener('click', reset)
 
 // FUNCTIONS
-function convertTemperature (value, unit) {
+function convertTemperature(value, unit) {
   let tempCelsius = Number
   let tempFahrenheit = Number
   let tempKelvin = Number
@@ -78,7 +88,7 @@ function convertTemperature (value, unit) {
   }
 }
 
-function reset () {
+function reset() {
   resultsContainer.style.display = 'none'
   convertButton.disabled = false
   selectedUnit.disabled = false
@@ -87,7 +97,7 @@ function reset () {
   selectedUnit.value = 'celsius'
 }
 
-function disableInterface () {
+function disableInterface() {
   convertButton.disabled = true
   selectedUnit.disabled = true
   numberInput.disabled = true
