@@ -10,10 +10,6 @@ const fahrenheitResult = (document.querySelector('#fahrenheit-result'))
 const kelvinResult = (document.querySelector('#kelvin-result'))
 const resetButton = document.querySelector('#reset-text p')
 
-// const pCelsius = document.querySelector('#p-celsius')
-// // const pFahrenheit = document.querySelector('#p-fahrenheit')
-// const pKelvin = document.querySelector('#p-kelvin')
-
 // EVENTS
 convertButton.addEventListener('click', (e) => {
   const numberValue = parseFloat(numberInput.value) // float
