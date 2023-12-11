@@ -48,10 +48,6 @@ function convertTemperature(value, unit) {
       tempFahrenheit = ((value * 9 / 5) + 32).toFixed(2)
       tempKelvin = (value + 273.15).toFixed(2)
 
-      celsiusResult.innerHTML = tempCelsius
-      fahrenheitResult.innerHTML = tempFahrenheit
-      kelvinResult.innerHTML = tempKelvin
-
       disableInterface()
 
       break
@@ -60,10 +56,6 @@ function convertTemperature(value, unit) {
       tempCelsius = ((value - 32) * 5 / 9).toFixed(2)
       tempFahrenheit = (value).toFixed(2)
       tempKelvin = ((value - 32) * 5 / 9 + 273.15).toFixed(2)
-
-      celsiusResult.innerHTML = tempCelsius
-      fahrenheitResult.innerHTML = tempFahrenheit
-      kelvinResult.innerHTML = tempKelvin
 
       disableInterface()
 
@@ -74,14 +66,13 @@ function convertTemperature(value, unit) {
       tempFahrenheit = ((value - 275.17) * 9 / 5 + 32).toFixed(2)
       tempKelvin = (value).toFixed(2)
 
-      celsiusResult.innerHTML = tempCelsius
-      fahrenheitResult.innerHTML = tempFahrenheit
-      kelvinResult.innerHTML = tempKelvin
-
       disableInterface()
 
       break
   }
+  celsiusResult.innerHTML = tempCelsius
+  fahrenheitResult.innerHTML = tempFahrenheit
+  kelvinResult.innerHTML = tempKelvin
 }
 
 function reset() {
