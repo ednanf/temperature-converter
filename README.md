@@ -7,4 +7,4 @@ Simple temperature converter using HTML/CSS/JS.
 
 This was my first JS project and I had a lot of fun learning and testing it.
 
-## [Access it here](https://ednanf.github.io/JS-Temperature-Converter/)
+## [Access it here](https://ednanf.github.io/temperature-converter/)
